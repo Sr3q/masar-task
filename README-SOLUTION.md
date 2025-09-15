@@ -2,23 +2,24 @@
 
 ## 1) Code Structure — What & Why
 
-app/
-(tasks)/page.tsx ← Tasks feature page (assembles UI)
-api/tasks/route.ts ← REST API (GET/POST/PATCH/DELETE)
-layout.tsx / providers.tsx ← Theme + CssBaseline (MUI)
-theme.ts ← MUI theme configuration
-features/
-tasks/
-components/
-TaskForm.tsx ← Add task + priority
-TaskList.tsx ← List + loading/error states
-TaskItem.tsx ← Single item (edit/delete/toggle)
-FilterBar.tsx ← Filters: All / Done / Todo
-state/
-tasks-context.tsx ← TasksProvider + useTasks() (shared state)
-types.ts ← Task/Priority types
-lib/
-storage.ts ← File-based JSON storage (no DB)
+**Project Structure**
+
+- app/
+  - (tasks)/page.tsx -> Tasks feature page (assembles UI)
+  - api/tasks/route.ts -> REST API (GET/POST/PATCH/DELETE)
+  - layout.tsx / providers.tsx -> Theme + CssBaseline (MUI)
+- features/
+  - tasks/
+    - components/
+      - TaskForm.tsx -> Add task + priority
+      - TaskList.tsx -> List + loading/error states
+      - TaskItem.tsx -> Single item (edit/delete/toggle)
+      - FilterBar.tsx -> Filters: All / Done / Todo
+    - state/
+      - tasks-context.tsx -> TasksProvider + useTasks() (shared state)
+    - types.ts -> Task/Priority types
+- lib/
+  - storage.ts -> File-based JSON storage (no DB)
 
 **Why this organization?**
 
